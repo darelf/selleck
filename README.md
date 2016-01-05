@@ -7,8 +7,8 @@ body of the request as `json`. Mustache implementation comes from
 [bbmustache](https://github.com/soranoba/bbmustache) and web framework is
 [cowboy](https://ninenines.eu/)
 
-Kind of an experiment. Doesn't handle every case. Specifically, non-existant files
-cause a 500 error rather than a 404. ( Something to add in the future )
+Kind of an experiment. Doesn't handle every case. ~~Specifically, non-existant files
+cause a 500 error rather than a 404. ( Something to add in the future )~~
 
     make
 
