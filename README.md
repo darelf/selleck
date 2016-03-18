@@ -1,5 +1,7 @@
 # Selleck
 
+[![Build Status](https://travis-ci.org/darelf/selleck.svg?branch=master)](https://travis-ci.org/darelf/selleck)
+
 ### Overview
 
 Serve up html from mustache templates and provided data. Data is supplied in the
