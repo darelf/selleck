@@ -5,3 +5,5 @@ DEPS = jiffy cowboy bbmustache
 
 dep_bbmustache = git https://github.com/soranoba/bbmustache.git
 include erlang.mk
+test:: tests
+
