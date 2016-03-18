@@ -15,6 +15,11 @@ cause a 500 error rather than a 404. ( Something to add in the future )~~
 or
 
     make run
+    
+### Tests
+
+This uses [erlang.mk](http://erlang.mk) so `make tests` works. I have also added a target
+`make test` so that travis can automate the tests as well.
 
 ### Configuration
 
@@ -34,6 +39,3 @@ default configuration you can try it out using:
 
 Always welcome! PRs, issues, whatever.
 
-### Contact
-
-Twitter @darelf
