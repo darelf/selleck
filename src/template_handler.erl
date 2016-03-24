@@ -36,7 +36,7 @@ output(Data, Req) ->
 get_template_filename({error, bad_name}, Product, TemplateName) ->
   get_template_filename("priv/", Product, TemplateName);
 get_template_filename(BaseDir, Product, TemplateName) ->
-  FName = BaseDir ++ "/templates/" ++ binary_to_list(Product) ++ "/" ++ binary_to_list(TemplateName) ++ ".mustache",
+  FName = [BaseDir, "templates/", binary_to_list(Product), "/", binary_to_list(TemplateName), ".mustache"],
   case file:read_file_info(FName) of
     {ok, _} -> FName;
     _ -> file_not_found
@@ -74,7 +74,7 @@ get_template_test_() ->
   {"Get Template Tests",
     [
       { "File Not Found", ?_assertMatch(file_not_found, get_template("priv/", <<"test">>,<<"bogus_template_name">>))},
-      { "Test File Found", ?_assertMatch({bbmustache, _}, get_template("priv/", <<"test">>,<<"test">>)) }
+      { "Test File Found", ?_assertMatch({bbmustache, _}, get_template("priv/", <<"test">>, <<"test">>)) }
     ]
   }.
   
